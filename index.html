@@ -1,1534 +1,395 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#ffffff">
-
-    <meta name="description" content="St. Xavier's High School is a private Catholic mixed-day senior school located in Afraha, Nakuru County, Kenya. Explore admissions, academics, school fees, virtual tour and contacts.">
-    <meta name="keywords" content="St Xavier's High School, St Xaviers Nakuru, Catholic schools Nakuru, senior school Nakuru">
-    <meta name="author" content="St. Xavier's High School">
-    <meta name="robots" content="index, follow, max-image-preview:large">
-
-    <title>St. Xavier's High School | Nakuru</title>
-<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-    <link rel="canonical" href="https://stxaviershighkn.ac.ke/">
-    <link rel="icon" type="image/png" href="logo.jpeg">
-    <link rel="shortcut icon" href="favicon.ico">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="St. Xavier's High School | Nakuru">
-    <meta property="og:description" content="Official school information, admissions, academics and virtual tour.">
-    <meta property="og:url" content="https://stxaviershighkn.ac.ke/">
-    <meta property="og:image" content="https://stxaviershighkn.ac.ke/image1.jpeg">
-    <meta property="og:site_name" content="St. Xavier's High School">
-
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="St. Xavier's High School | Nakuru">
-    <meta name="twitter:image" content="https://stxaviershighkn.ac.ke/image1.jpeg">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800;900;1000&display=swap" rel="stylesheet">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-
-    <style>
-        /* VIRTUAL TOUR */
-
-        .virtual-tour {
-            background: #f5f7fa;
-            padding: 85px 0;
-        }
-
-        .tour-intro {
-            max-width: 850px;
-            margin: 0 auto 45px;
-            text-align: center;
-        }
-
-        .tour-intro h2 {
-            font-size: clamp(30px, 4vw, 46px);
-            font-weight: 900;
-            margin: 15px 0;
-        }
-
-        .tour-intro p {
-            color: #64748b;
-            line-height: 1.8;
-        }
-
-        .tour-description {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            margin-bottom: 45px;
-        }
-
-        .tour-info {
-            background: #fff;
-            padding: 28px;
-            border-radius: 14px;
-            border: 1px solid #e5e7eb;
-            box-shadow: 0 8px 25px rgba(0,0,0,.04);
-        }
-
-        .tour-info i {
-            font-size: 30px;
-            color: #c06014;
-            margin-bottom: 15px;
-            display: block;
-        }
-
-        .tour-info h3 {
-            font-size: 19px;
-            font-weight: 900;
-            margin-bottom: 12px;
-        }
-
-        .tour-info p {
-            color: #64748b;
-            font-size: 14px;
-            line-height: 1.8;
-            margin: 0;
-        }
-
-        .tour-gallery {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 16px;
-        }
-
-        .tour-gallery-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 13px;
-            height: 230px;
-            background: #ddd;
-        }
-
-        .tour-gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform .5s ease;
-        }
-
-        .tour-gallery-item:hover img {
-            transform: scale(1.08);
-        }
-
-        .tour-gallery-item span {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            padding: 35px 14px 13px;
-            color: white;
-            font-weight: 800;
-            font-size: 13px;
-            background: linear-gradient(transparent, rgba(0,0,0,.8));
-        }
-
-        /* SIDEBAR VIRTUAL TOUR */
-
-        .sidebar {
-            overflow-y: auto;
-            max-height: 100vh;
-        }
-
-        .sidebar nav a {
-            display: block;
-        }
-
-        .sidebar-tour {
-            padding: 20px 16px;
-            margin-top: 15px;
-            border-top: 1px solid rgba(128,128,128,.25);
-        }
-
-        .sidebar-tour h4 {
-            font-size: 14px;
-            font-weight: 900;
-            margin-bottom: 8px;
-        }
-
-        .sidebar-tour p {
-            font-size: 12px;
-            line-height: 1.7;
-            opacity: .8;
-            margin-bottom: 14px;
-        }
-
-        .sidebar-gallery {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 9px;
-        }
-
-        .sidebar-gallery a {
-            display: block;
-            height: 90px;
-            overflow: hidden;
-            border-radius: 8px;
-        }
-
-        .sidebar-gallery img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform .3s ease;
-        }
-
-        .sidebar-gallery a:hover img {
-            transform: scale(1.1);
-        }
-
-        .sidebar-tour-link {
-            display: block;
-            text-align: center;
-            padding: 11px;
-            background: #c06014;
-            color: #fff !important;
-            border-radius: 8px;
-            margin-top: 14px;
-            font-weight: 800;
-            font-size: 13px;
-            text-decoration: none;
-        }
-
-        /* RESPONSIVE VIRTUAL TOUR */
-
-        @media(max-width: 900px) {
-            .tour-gallery {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .tour-description {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media(max-width: 480px) {
-            .tour-gallery {
-                grid-template-columns: 1fr;
-            }
-
-            .tour-gallery-item {
-                height: 220px;
-            }
-        }
-    </style>
-</head>
-
-<body>
-
-<!-- HEADER -->
-<header class="site-header" id="siteHeader">
-
-    <nav class="container-xl navbar">
-
-        <a class="brand" href="#home">
-            <span class="brand-mark">
-                <i class="bi bi-mortarboard-fill"></i>
-            </span>
-
-            <span>
-                <b>ST. XAVIER'S</b>
-                <small>HIGH SCHOOL · NAKURU</small>
-            </span>
-        </a>
-
-        <button class="menu-toggle d-lg-none"
-                id="menuToggle"
-                aria-label="Open menu"
-                aria-controls="sidebar">
-            <i class="bi bi-list"></i>
-        </button>
-
-        <div class="desktop-nav d-none d-lg-flex">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#virtual-tour">Virtual Tour</a>
-            <a href="#academics">Academics</a>
-            <a href="#admissions">Admissions</a>
-            <a href="#fees">Fee Structure</a>
-            <a href="#donations">Donations</a>
-            <a href="#contact">Contact</a>
-        </div>
-
-        <a class="nav-cta d-none d-lg-inline-flex" href="#admissions">
-            Apply now ↗
-        </a>
-
-    </nav>
-
-</header>
-
-<div class="backdrop" id="backdrop"></div>
-
-<!-- SIDEBAR -->
-<aside class="sidebar" id="sidebar" aria-hidden="true">
-
-    <div class="sidehead">
-
-        <a class="brand" href="#home">
-            <span class="brand-mark">
-                <i class="bi bi-mortarboard-fill"></i>
-            </span>
-
-            <span>
-                <b>ST. XAVIER'S</b>
-                <small>HIGH SCHOOL · NAKURU</small>
-            </span>
-        </a>
-
-        <button id="closeMenu" aria-label="Close menu">×</button>
-
-    </div>
-
-    <nav>
-        <a href="#home">⌂　Home</a>
-        <a href="#about">ⓘ　About</a>
-        <a href="#virtual-tour">◉　Virtual Tour</a>
-        <a href="#academics">▤　Academics</a>
-        <a href="#admissions">✎　Admissions</a>
-        <a href="#fees">▣　Fee Structure</a>
-        <a href="#uniform">♧　Uniform</a>
-        <a href="#donations">♡　Donations</a>
-        <a href="#contact">⌖　Contact</a>
-    </nav>
-
-    <!-- SIDEBAR VIRTUAL TOUR -->
-    <div class="sidebar-tour">
-
-        <h4>
-            <i class="bi bi-camera-fill"></i>
-            SCHOOL VIRTUAL TOUR
-        </h4>
-
-        <p>
-            Take a closer look at St. Xavier's High School.
-            Explore our school through these photographs.
-        </p>
-
-        <div class="sidebar-gallery">
-
-            <a href="#tour-image-5" aria-label="View school photograph 5">
-                <img src="image5.jpeg"
-                     alt="St Xavier's High School photograph 5"
-                     loading="lazy">
-            </a>
-
-            <a href="#tour-image-6" aria-label="View school photograph 6">
-                <img src="image6.jpeg"
-                     alt="St Xavier's High School photograph 6"
-                     loading="lazy">
-            </a>
-
-            <a href="#tour-image-7" aria-label="View school photograph 7">
-                <img src="image7.jpeg"
-                     alt="St Xavier's High School photograph 7"
-                     loading="lazy">
-            </a>
-
-            <a href="#tour-image-8" aria-label="View school photograph 8">
-                <img src="image8.jpeg"
-                     alt="St Xavier's High School photograph 8"
-                     loading="lazy">
-            </a>
-
-        </div>
-
-        <a href="#virtual-tour" class="sidebar-tour-link">
-            Explore Full Virtual Tour
-            <i class="bi bi-arrow-right"></i>
-        </a>
-
-    </div>
-
-    <a class="side-wa" href="https://wa.me/254116450944">
-        WhatsApp the school
-    </a>
-
-</aside>
-
+```html
 <main>
-
-    <!-- HOME / EIGHT-IMAGE SLIDESHOW -->
-    <section class="hero hero-simple" id="home">
-
-        <div class="hero-slideshow"
-             aria-label="St. Xavier's High School image slideshow">
-
-            <div class="slide active"
-                 style="background-image:url('image6.jpeg')"></div>
-
-            <div class="slide"
-                 style="background-image:url('image2.jpeg')"></div>
-
-            <div class="slide"
-                 style="background-image:url('image3.jpeg')"></div>
-
-            <div class="slide"
-                 style="background-image:url('image4.jpeg')"></div>
-
-            <div class="slide"
-                 style="background-image:url('image1.jpeg')"></div>
-
-            <div class="slide"
-                 style="background-image:url('image5.jpeg')"></div>
-
-            <div class="slide"
-                 style="background-image:url('image7.jpeg')"></div>
-
-            <div class="slide"
-                 style="background-image:url('image8.jpeg')"></div>
-
-            <div class="slide-caption">
-                <span>ST. XAVIER'S HIGH SCHOOL</span>
-                <b>Learning. Faith. Excellence.</b>
-            </div>
-
-            <div class="slide-dots" aria-label="Slideshow pagination">
-                <span class="active"></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- SCHOOL FACTS -->
-   <!-- FACTS SECTION -->
-<!-- SCHOOL FACTS -->
-<section class="facts">
-    <div class="container-xl fact-grid">
-
-        <div class="fact-item">
-            <i class="bi bi-building"></i>
-            <b>Private School</b>
-            <small>School category</small>
-        </div>
-
-        <div class="fact-item">
-            <i class="bi bi-people-fill"></i>
-            <b>Mixed Day</b>
-            <small>School type</small>
-        </div>
-
-        <div class="fact-item">
-            <i class="bi bi-cross"></i>
-            <b>Catholic Values</b>
-            <small>Faith and formation</small>
-        </div>
-
-        <div class="fact-item">
-            <i class="bi bi-geo-alt-fill"></i>
-            <b>Afraha, Nakuru</b>
-            <small>Kenya</small>
-        </div>
-
-    </div>
+<section class="hero hero-simple" id="home">
+<div class="hero-slideshow" aria-label="School slideshow">
+<div class="slide active" style="background-image:url('image6.jpeg')"></div>
+<div class="slide" style="background-image:url('image2.jpeg')"></div>
+<div class="slide" style="background-image:url('image3.jpeg')"></div>
+<div class="slide" style="background-image:url('image4.jpeg')"></div>
+<div class="slide" style="background-image:url('image1.jpeg')"></div>
+<div class="slide" style="background-image:url('image5.jpeg')"></div>
+<div class="slide" style="background-image:url('image7.jpeg')"></div>
+<div class="slide" style="background-image:url('image8.jpeg')"></div>
+<div class="slide-caption">
+<span>ST. XAVIER'S HIGH SCHOOL</span>
+<b>Learning. Faith. Excellence.</b>
+</div>
+<div class="slide-dots">
+<span class="active"></span><span></span><span></span><span></span>
+<span></span><span></span><span></span><span></span>
+</div>
+</div>
 </section>
-    <!-- ABOUT -->
-    <section class="section" id="about">
 
-        <div class="container-xl">
-
-            <div class="eyebrow dark">WELCOME TO ST. XAVIER'S</div>
-
-            <div class="heading-row">
-
-                <h2>
-                    Education that develops<br>
-                    <em>the whole person.</em>
-                </h2>
-
-                <p>
-                    We believe education is more than academic achievement.
-                    It is a journey of discovering potential, building character
-                    and preparing young people to contribute positively to society.
-                </p>
-
-            </div>
-
-            <div class="two-col">
-
-                <div class="about-placeholder">
-                    <i class="bi bi-mortarboard-fill"></i>
-                    <h3>St. Xavier's High School</h3>
-                    <p>Afraha, Nakuru County, Kenya</p>
-                </div>
-
-                <div>
-
-                    <div class="quote">“</div>
-
-                    <h3>
-                        St. Xavier's High School is a private, mixed-day school
-                        owned and managed by the Catholic Diocese of Nakuru
-                        in collaboration with the Incarnate Word Sisters.
-                    </h3>
-
-                    <p>
-                        The school offers holistic education that provides
-                        intellectual, spiritual, moral and social growth,
-                        founded on Christian values and principles.
-                    </p>
-
-                    <div class="values">
-
-                        <p>
-                            <b>✧ Intellectual growth</b>
-                            <small>
-                                Encouraging curiosity and a love of learning.
-                            </small>
-                        </p>
-
-                        <p>
-                            <b>♡ Spiritual and moral growth</b>
-                            <small>
-                                Building character through Christian values.
-                            </small>
-                        </p>
-
-                        <p>
-                            <b>♧ Social growth</b>
-                            <small>
-                                Developing responsibility, respect and service.
-                            </small>
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- VIRTUAL TOUR -->
-    <section class="virtual-tour" id="virtual-tour">
-
-        <div class="container-xl">
-
-            <div class="tour-intro">
-
-                <div class="eyebrow dark">EXPLORE OUR SCHOOL</div>
-
-                <h2>
-                    Welcome to our<br>
-                    <em>Virtual Tour.</em>
-                </h2>
-
-                <p>
-                    Discover St. Xavier's High School, Afraha, Nakuru.
-                    Learn about our educational mission, Catholic foundation,
-                    values and commitment to developing responsible,
-                    knowledgeable and well-rounded learners.
-                </p>
-
-            </div>
-
-            <!-- SCHOOL INFORMATION -->
-            <div class="tour-description">
-
-                <article class="tour-info">
-
-                    <i class="bi bi-building"></i>
-
-                    <h3>About Our School</h3>
-
-                    <p>
-                        St. Xavier's High School is a private mixed-day school
-                        located in Afraha, Nakuru County, Kenya. The school
-                        provides an educational environment that encourages
-                        learners to grow academically, socially and spiritually.
-                    </p>
-
-                </article>
-
-                <article class="tour-info">
-
-                    <i class="bi bi-cross"></i>
-
-                    <h3>Our Catholic Foundation</h3>
-
-                    <p>
-                        The school is owned and managed by the Catholic Diocese
-                        of Nakuru in collaboration with the Incarnate Word Sisters.
-                        Christian values guide the school's approach to education,
-                        discipline, respect and service.
-                    </p>
-
-                </article>
-
-                <article class="tour-info">
-
-                    <i class="bi bi-book-half"></i>
-
-                    <h3>Our Educational Mission</h3>
-
-                    <p>
-                        We believe that every learner has potential.
-                        Our educational approach seeks to develop intellectual
-                        ability, moral responsibility, confidence, creativity
-                        and a commitment to making a positive difference.
-                    </p>
-
-                </article>
-
-                <article class="tour-info">
-
-                    <i class="bi bi-lightbulb"></i>
-
-                    <h3>Academic Development</h3>
-
-                    <p>
-                        We encourage learners to explore their interests,
-                        develop their abilities and prepare for future
-                        opportunities through academic pathways and
-                        continuous learning.
-                    </p>
-
-                </article>
-
-                <article class="tour-info">
-
-                    <i class="bi bi-heart"></i>
-
-                    <h3>Character Formation</h3>
-
-                    <p>
-                        Education includes more than classroom learning.
-                        We value kindness, honesty, discipline, responsibility,
-                        respect and compassion in everyday school life.
-                    </p>
-
-                </article>
-
-                <article class="tour-info">
-
-                    <i class="bi bi-people"></i>
-
-                    <h3>Community and Service</h3>
-
-                    <p>
-                        We recognise the importance of working together
-                        with families and the wider community to support
-                        learners and prepare them to serve society.
-                    </p>
-
-                </article>
-
-            </div>
-
-            <!-- SCHOOL PHOTO GALLERY -->
-            <div class="center mb-4">
-
-                <div class="eyebrow dark">PHOTO EXPERIENCE</div>
-
-                <h2>Explore our <em>school.</em></h2>
-
-                <p>
-                    A visual introduction to St. Xavier's High School.
-                </p>
-
-            </div>
-
-            <div class="tour-gallery">
-
-                <div class="tour-gallery-item" id="tour-image-1">
-                    <img src="image1.jpeg"
-                         alt="St Xavier's High School view 1"
-                         loading="lazy">
-                    <span>St. Xavier's High School</span>
-                </div>
-
-                <div class="tour-gallery-item" id="tour-image-2">
-                    <img src="image2.jpeg"
-                         alt="St Xavier's High School view 2"
-                         loading="lazy">
-                    <span>Discover Our School</span>
-                </div>
-
-                <div class="tour-gallery-item" id="tour-image-3">
-                    <img src="image3.jpeg"
-                         alt="St Xavier's High School view 3"
-                         loading="lazy">
-                    <span>Learning Environment</span>
-                </div>
-
-                <div class="tour-gallery-item" id="tour-image-4">
-                    <img src="image4.jpeg"
-                         alt="St Xavier's High School view 4"
-                         loading="lazy">
-                    <span>School Life</span>
-                </div>
-
-                <div class="tour-gallery-item" id="tour-image-5">
-                    <img src="image5.jpeg"
-                         alt="St Xavier's High School view 5"
-                         loading="lazy">
-                    <span>Our School Community</span>
-                </div>
-
-                <div class="tour-gallery-item" id="tour-image-6">
-                    <img src="image6.jpeg"
-                         alt="St Xavier's High School view 6"
-                         loading="lazy">
-                    <span>Education and Growth</span>
-                </div>
-
-                <div class="tour-gallery-item" id="tour-image-7">
-                    <img src="image7.jpeg"
-                         alt="St Xavier's High School view 7"
-                         loading="lazy">
-                    <span>School Experience</span>
-                </div>
-
-                <div class="tour-gallery-item" id="tour-image-8">
-                    <img src="image8.jpeg"
-                         alt="St Xavier's High School view 8"
-                         loading="lazy">
-                    <span>Welcome to St. Xavier's</span>
-                </div>
-
-            </div>
-
-            <div class="text-center mt-5">
-
-                <a href="#admissions" class="btn gold">
-                    Join St. Xavier's
-                    <i class="bi bi-arrow-right"></i>
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- ACADEMICS -->
-    <section class="section pale" id="academics">
-
-        <div class="container-xl">
-
-            <div class="center">
-
-                <div class="eyebrow dark">LEARNING PATHWAYS</div>
-
-                <h2>Discover your <em>pathway.</em></h2>
-
-                <p>
-                    Grade 10 subject combinations supplied for the school.
-                </p>
-
-            </div>
-
-            <div class="cards two">
-
-                <article class="cardx">
-
-                    <span class="tag">STEM</span>
-
-                    <h3>
-                        Science, Technology, Engineering & Mathematics
-                    </h3>
-
-                    <ul>
-                        <li>
-                            Biology, Chemistry, Computer Studies — ST1046
-                        </li>
-                        <li>
-                            Biology, Chemistry, Physics — ST1048
-                        </li>
-                        <li>
-                            Agriculture, General Science, Home Science — ST2088
-                        </li>
-                        <li>
-                            Business Studies, Computer Studies, Physics — ST2007
-                        </li>
-                    </ul>
-
-                </article>
-
-                <article class="cardx">
-
-                    <span class="tag">SOCIAL SCIENCES</span>
-
-                    <h3>People, society & communication</h3>
-
-                    <ul>
-                        <li>
-                            Business Studies, Fasihi ya Kiswahili,
-                            Literature in English — SS1080
-                        </li>
-                        <li>
-                            Business Studies, Geography,
-                            History & Citizenship — SS2025
-                        </li>
-                        <li>
-                            Christian Religious Education, General Science,
-                            History & Citizenship — SS2076
-                        </li>
-                    </ul>
-
-                </article>
-
-            </div>
-
-            <small class="muted">
-                Confirm current subject availability directly with the school
-                before making a selection.
-            </small>
-
-        </div>
-
-    </section>
-
-    <!-- ADMISSIONS -->
-    <section class="section" id="admissions">
-
-        <div class="container-xl">
-
-            <div class="banner">
-
-                <div>
-
-                    <div class="eyebrow">ADMISSIONS</div>
-
-                    <h2>
-                        Begin your journey<br>
-                        at <em>St. Xavier's.</em>
-                    </h2>
-
-                    <p>
-                        Complete the enquiry form and send the details
-                        to the school through WhatsApp.
-                    </p>
-
-                </div>
-
-                <a class="btn gold" href="#admissionForm">
-                    Admission enquiry ↓
-                </a>
-
-            </div>
-
-            <div class="two-col admission">
-
-                <div>
-
-                    <div class="eyebrow dark">ADMISSIONS</div>
-
-                    <h2>
-                        We're ready to<br>
-                        <em>hear from you.</em>
-                    </h2>
-
-                    <p>
-                        Share a learner's details with the school.
-                        WhatsApp will open with the information prepared
-                        for you to review and send.
-                    </p>
-
-                    <div class="wa-box">
-                        ☏　<b>WhatsApp 0116450944</b>
-                    </div>
-
-                    <small class="muted">
-                        You must press Send in WhatsApp to deliver the message.
-                    </small>
-
-                </div>
-
-                <form id="admissionForm" class="formbox form-background">
-
-                    <h3>Admission enquiry form</h3>
-
-                    <p>Complete the relevant details.</p>
-
-                    <div class="row g-3">
-
-                        <div class="col-12">
-                            <label>Student's full name *</label>
-                            <input class="form-control"
-                                   name="studentName"
-                                   required>
-                        </div>
-
-                        <div class="col-md-6">
-                            <label>Date of birth</label>
-                            <input class="form-control"
-                                   name="dob"
-                                   type="date">
-                        </div>
-
-                        <div class="col-md-6">
-                            <label>KJSEA / Assessment number</label>
-                            <input class="form-control"
-                                   name="assessment">
-                        </div>
-
-                        <div class="col-md-6">
-                            <label>Grade applying for *</label>
-                            <select class="form-select"
-                                    name="grade"
-                                    required>
-                                <option value="">Select</option>
-                                <option>Grade 10</option>
-                                <option>Other / Please advise</option>
-                            </select>
-                        </div>
-
-                        <div class="col-md-6">
-                            <label>Religion</label>
-                            <input class="form-control" name="religion">
-                        </div>
-
-                        <div class="col-md-6">
-                            <label>Denomination</label>
-                            <input class="form-control" name="denomination">
-                        </div>
-
-                        <div class="col-md-6">
-                            <label>Pathway</label>
-                            <select class="form-select" name="pathway">
-                                <option value="">Select</option>
-                                <option>STEM</option>
-                                <option>Social Sciences</option>
-                                <option>Not yet decided</option>
-                            </select>
-                        </div>
-
-                        <div class="col-12">
-                            <label>Subject combination</label>
-                            <input class="form-control" name="combination">
-                        </div>
-
-                        <div class="col-md-6">
-                            <label>Father's name</label>
-                            <input class="form-control" name="father">
-                        </div>
-
-                        <div class="col-md-6">
-                            <label>Father's phone</label>
-                            <input class="form-control" name="fatherPhone">
-                        </div>
-
-                        <div class="col-md-6">
-                            <label>Mother's name</label>
-                            <input class="form-control" name="mother">
-                        </div>
-
-                        <div class="col-md-6">
-                            <label>Mother's phone</label>
-                            <input class="form-control" name="motherPhone">
-                        </div>
-
-                        <div class="col-md-6">
-                            <label>Guardian's name</label>
-                            <input class="form-control" name="guardian">
-                        </div>
-
-                        <div class="col-md-6">
-                            <label>Guardian's phone</label>
-                            <input class="form-control" name="guardianPhone">
-                        </div>
-
-                        <div class="col-12">
-                            <b class="group-title">
-                                For Catholic applicants (where applicable)
-                            </b>
-                        </div>
-
-                        <div class="col-md-4">
-                            <label>Baptism</label>
-                            <select class="form-select" name="baptism">
-                                <option value="">Select</option>
-                                <option>Yes</option>
-                                <option>No</option>
-                            </select>
-                        </div>
-
-                        <div class="col-md-4">
-                            <label>First Holy Communion</label>
-                            <select class="form-select" name="communion">
-                                <option value="">Select</option>
-                                <option>Yes</option>
-                                <option>No</option>
-                            </select>
-                        </div>
-
-                        <div class="col-md-4">
-                            <label>Confirmation</label>
-                            <select class="form-select" name="confirmation">
-                                <option value="">Select</option>
-                                <option>Yes</option>
-                                <option>No</option>
-                            </select>
-                        </div>
-
-                        <div class="col-12">
-                            <label>Additional message</label>
-                            <textarea class="form-control"
-                                      name="parentMessage"
-                                      rows="3"></textarea>
-                        </div>
-
-                        <div class="col-12">
-
-                            <button class="btn whatsapp w-100" type="submit">
-                                <i class="bi bi-whatsapp"></i>
-                                Send admission details on WhatsApp
-                            </button>
-
-                            <small class="muted">
-                                WhatsApp opens with the message prepared.
-                                Review and press Send.
-                            </small>
-
-                        </div>
-
-                    </div>
-
-                </form>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- FEES -->
-    <section class="section pale" id="fees">
-
-        <div class="container-xl">
-
-            <div class="eyebrow dark">PLANNING FOR SCHOOL</div>
-
-            <div class="heading-row">
-
-                <h2>
-                    Fee structure &<br>
-                    <em>payment details.</em>
-                </h2>
-
-                <p>
-                    Payment details reproduced as supplied.
-                    Please contact the school to confirm any changes before paying.
-                </p>
-
-            </div>
-
-            <div class="two-col">
-
-                <div class="tablebox">
-
-                    <h3>School fees · KSh</h3>
-
-                    <div class="table-responsive">
-
-                        <table class="table">
-
-                            <thead>
-                                <tr>
-                                    <th></th>
-                                    <th>1st Term</th>
-                                    <th>3rd Term</th>
-                                    <th>2nd Term</th>
-                                </tr>
-                            </thead>
-
-                            <tbody>
-
-                                <tr>
-                                    <th>SCHOOL FEE</th>
-                                    <td>16,500</td>
-                                    <td>16,500</td>
-                                    <td>16,500</td>
-                                </tr>
-
-                                <tr>
-                                    <th>ADMISSION FEE</th>
-                                    <td>4,000</td>
-                                    <td>—</td>
-                                    <td>—</td>
-                                </tr>
-
-                                <tr class="total">
-                                    <th>TOTAL</th>
-                                    <td>20,500</td>
-                                    <td>16,500</td>
-                                    <td>16,500</td>
-                                </tr>
-
-                            </tbody>
-
-                        </table>
-
-                    </div>
-
-                    <small class="muted">
-                        Term order and amounts retained exactly as supplied.
-                        Confirm the current fee schedule.
-                    </small>
-
-                </div>
-
-                <div class="pay-stack">
-
-                    <article class="pay-card">
-
-                        <div class="eyebrow dark">BANK TRANSFER</div>
-
-                        <h3>School fees · KCB</h3>
-
-                        <p>Kenya Commercial Bank (K.C.B.)</p>
-
-                        <small>Bank account number</small>
-
-                        <strong>1151895032</strong>
-
-                        <p class="muted">
-                            School instruction: strictly pay school fees via bank account.
-                        </p>
-
-                    </article>
-
-                    <article class="pay-card">
-
-                        <div class="eyebrow dark">PAYBILL OPTION SUPPLIED</div>
-
-                        <h3>KCB Paybill</h3>
-
-                        <p>Business number <b>522123</b></p>
-
-                        <small>Account reference supplied</small>
-
-                        <strong>20495K + student details</strong>
-
-                        <p class="muted">
-                            Instruction says student name and admission number
-                            with no spaces. Confirm exact account format before use.
-                        </p>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-            <div class="cards two contributions">
-
-                <article class="cardx">
-
-                    <h3>Snacks</h3>
-
-                    <strong>
-                        KSh 1,200 <small>per term</small>
-                    </strong>
-
-                    <p>Pay via M-Pesa to <b>0116450944</b>.</p>
-
-                </article>
-
-                <article class="cardx">
-
-                    <h3>Curriculum Support Program</h3>
-
-                    <strong>
-                        KSh 2,500 <small>per term</small>
-                    </strong>
-
-                    <p>Pay via M-Pesa to <b>0116450944</b>.</p>
-
-                </article>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- UNIFORM -->
-    <section class="section" id="uniform">
-
-        <div class="container-xl">
-
-            <div class="center">
-
-                <div class="eyebrow dark">GETTING READY</div>
-
-                <h2>Uniform & learner <em>requirements.</em></h2>
-
-                <p>
-                    School uniform is provided by the school at KSh 15,000.
-                </p>
-
-            </div>
-
-            <div class="uniform-pay">
-
-                <b>Uniform payment — strictly via bank account</b>
-
-                <span>
-                    Account name: Simba - St. Xavier's High School
-                </span>
-
-                <span>
-                    KCB account number: <b>1153498650</b>
-                </span>
-
-                <strong>KSh 15,000</strong>
-
-            </div>
-
-            <div class="cards three">
-
-                <article class="cardx">
-
-                    <h3>Girls' uniform</h3>
-
-                    <ul>
-                        <li>2 skirts</li>
-                        <li>2 trousers</li>
-                        <li>2 short-sleeved blouses/shirts</li>
-                        <li>2 ties</li>
-                        <li>1 long-sleeved sweater</li>
-                        <li>1 sleeveless sweater</li>
-                        <li>2 pairs of socks</li>
-                    </ul>
-
-                </article>
-
-                <article class="cardx">
-
-                    <h3>Boys' uniform</h3>
-
-                    <ul>
-                        <li>1 blazer</li>
-                        <li>1 tracksuit</li>
-                        <li>1 P.E. kit</li>
-                        <li>T-shirt</li>
-                        <li>Hymn book</li>
-                        <li>Prayer book</li>
-                    </ul>
-
-                    <p class="note">
-                        Textbooks are available in the school library.
-                    </p>
-
-                </article>
-
-                <article class="cardx">
-
-                    <h3>To be provided by learners</h3>
-
-                    <ul>
-                        <li>Black shoes for all students</li>
-                        <li>White sports shoes</li>
-                        <li>8 ruled exercise books and 1 squared book (200 pages)</li>
-                        <li>Biro pens and pencils</li>
-                        <li>Music writing book (music students)</li>
-                        <li>Scientific calculator and mathematical log table (STEM students)</li>
-                        <li>Plate, cup and spoon</li>
-                        <li>Revised Standard Bible for all</li>
-                        <li>Copy of birth certificate</li>
-                        <li>Copy of KJSEA certificate</li>
-                        <li>Padlock</li>
-                    </ul>
-
-                </article>
-
-            </div>
-
-            <p class="note">
-                Grooming: Girls should braid their hair and neatly tie it at the centre.
-            </p>
-
-            <p class="signoff">
-                Yours sincerely,<br>
-                <b>Sr. Anne Mutinda</b><br>
-                Principal
-            </p>
-
-        </div>
-
-    </section>
-
-    <!-- DONATIONS -->
-    <section class="section donations" id="donations">
-
-        <div class="container-xl">
-
-            <div class="center donation-heading">
-
-                <div class="eyebrow dark">SCHOOL SUPPORT</div>
-
-                <h2>Support <em>St. Xavier's.</em></h2>
-
-                <p>
-                    Contributions support the school's learning environment,
-                    student welfare and educational programmes.
-                </p>
-
-            </div>
-
-            <div class="cards three donation-cards">
-
-                <article class="cardx donation-card">
-
-                    <div class="donation-icon">
-                        <i class="bi bi-bank"></i>
-                    </div>
-
-                    <h3>KCB Bank Transfer</h3>
-
-                    <p>Kenya Commercial Bank</p>
-
-                    <small>School account number</small>
-
-                    <strong>1151895032</strong>
-
-                </article>
-
-                <article class="cardx donation-card">
-
-                    <div class="donation-icon">
-                        <i class="bi bi-phone"></i>
-                    </div>
-
-                    <h3>KCB Paybill</h3>
-
-                    <p>Business number</p>
-
-                    <strong>522123</strong>
-
-                    <small>Account reference</small>
-
-                    <strong>20495K + student details</strong>
-
-                    <p class="note">
-                        Confirm the correct reference for donations with the school.
-                    </p>
-
-                </article>
-
-                <article class="cardx donation-card">
-
-                    <div class="donation-icon">
-                        <i class="bi bi-cash-coin"></i>
-                    </div>
-
-                    <h3>M-Pesa</h3>
-
-                    <p>School payment number</p>
-
-                    <strong>0116450944</strong>
-
-                    <a href="https://wa.me/254116450944"
-                       target="_blank"
-                       rel="noopener"
-                       class="donation-link">
-                        Contact the school
-                        <i class="bi bi-arrow-up-right"></i>
-                    </a>
-
-                </article>
-
-            </div>
-
-            <div class="cards two donation-programmes">
-
-                <article class="cardx">
-
-                    <h3>Snacks</h3>
-
-                    <strong>
-                        KSh 1,200 <small>per term</small>
-                    </strong>
-
-                    <p>M-Pesa: <b>0116450944</b></p>
-
-                </article>
-
-                <article class="cardx">
-
-                    <h3>Curriculum Support Program</h3>
-
-                    <strong>
-                        KSh 2,500 <small>per term</small>
-                    </strong>
-
-                    <p>M-Pesa: <b>0116450944</b></p>
-
-                </article>
-
-            </div>
-
-            <p class="donation-note">
-                Please contact the school to confirm the correct payment reference
-                before making a donation.
-            </p>
-
-        </div>
-
-    </section>
-
-    <!-- CONTACT -->
-    <section class="section" id="contact">
-
-        <div class="container-xl">
-
-            <div class="eyebrow dark">GET IN TOUCH</div>
-
-            <h2>
-                We'd be glad to<br>
-                <em>hear from you.</em>
-            </h2>
-
-            <div class="two-col contact">
-
-                <div>
-
-                    <p>
-                        ☎　<a href="tel:0703990989">0703 990 989</a>
-                    </p>
-
-                    <p>
-                        ✉　<a href="mailto:stxaviershighkn@gmail.com">
-                            stxaviershighkn@gmail.com
-                        </a>
-                    </p>
-
-                    <p>⌖　Afraha, Nakuru County, Kenya</p>
-
-                    <p>
-                        WhatsApp　
-                        <a href="https://wa.me/254116450944">
-                            0116 450 944
-                        </a>
-                    </p>
-
-                    <p>School code　<b>K7090211</b></p>
-
-                    <p>
-                        P.O. Box 618, Nakuru
-                        <small>(postal code to be confirmed)</small>
-                    </p>
-
-                </div>
-
-                <div class="map">
-
-                    <iframe
-                        title="Map to St Xavier's High School"
-                        src="https://www.google.com/maps?q=-0.289016,36.071659&z=16&output=embed"
-                        loading="lazy">
-                    </iframe>
-
-                    <a href="https://www.google.com/maps?q=-0.289016,36.071659"
-                       target="_blank"
-                       rel="noopener">
-                        Open directions ↗
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
+<section class="facts">
+<div class="container-xl fact-grid">
+<div class="fact-item"><i class="bi bi-building"></i><b>Private School</b><small>School category</small></div>
+<div class="fact-item"><i class="bi bi-people-fill"></i><b>Mixed Day</b><small>School type</small></div>
+<div class="fact-item"><i class="bi bi-cross"></i><b>Catholic Values</b><small>Faith and formation</small></div>
+<div class="fact-item"><i class="bi bi-geo-alt-fill"></i><b>Mercy Mission</b><small>Nakuru, Kenya</small></div>
+</div>
+</section>
+
+<section class="section" id="about">
+<div class="container-xl">
+<div class="eyebrow dark">WELCOME TO ST. XAVIER'S</div>
+<div class="heading-row">
+<h2>Education that develops<br><em>the whole person.</em></h2>
+<p>We believe education is more than academic achievement. It is a journey of discovering potential, building character and preparing young people to contribute positively to society.</p>
+</div>
+<div class="two-col">
+<div class="about-placeholder">
+<img src="logo.jpeg" alt="St. Xavier's High School logo">
+<h3>St. Xavier's High School</h3>
+<p>Mercy Mission, Nakuru, Kenya</p>
+</div>
+<div>
+<div class="quote">“</div>
+<h3>St. Xavier's High School is a private, mixed-day school owned and managed by the Catholic Diocese of Nakuru in collaboration with the Incarnate Word Sisters.</h3>
+<p>The school offers holistic education that provides intellectual, spiritual, moral and social growth, founded on Christian values and principles.</p>
+<div class="values">
+<p><b>✧ Intellectual growth</b><small>Encouraging curiosity and a love of learning.</small></p>
+<p><b>♡ Spiritual and moral growth</b><small>Building character through Christian values.</small></p>
+<p><b>♧ Social growth</b><small>Developing responsibility, respect and service.</small></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="virtual-tour" id="virtual-tour">
+<div class="container-xl">
+<div class="tour-intro">
+<div class="eyebrow dark">EXPLORE OUR SCHOOL</div>
+<h2>Welcome to our<br><em>Virtual Tour.</em></h2>
+<p>Discover St. Xavier's High School, Mercy Mission, Nakuru. Explore our educational mission, Catholic foundation and commitment to developing responsible, knowledgeable and well-rounded learners.</p>
+</div>
+<div class="tour-description">
+<article class="tour-info"><i class="bi bi-building"></i><h3>About Our School</h3><p>St. Xavier's High School is a private mixed-day school located at Mercy Mission, Nakuru, Kenya.</p></article>
+<article class="tour-info"><i class="bi bi-cross"></i><h3>Our Catholic Foundation</h3><p>Christian values guide our approach to education, discipline, respect and service.</p></article>
+<article class="tour-info"><i class="bi bi-book-half"></i><h3>Our Educational Mission</h3><p>We seek to develop intellectual ability, moral responsibility, confidence and creativity.</p></article>
+</div>
+<div class="center mb-4">
+<div class="eyebrow dark">PHOTO EXPERIENCE</div>
+<h2>Explore our <em>school.</em></h2>
+</div>
+<div class="tour-gallery">
+<div class="tour-gallery-item"><img src="image1.jpeg" alt="School photograph 1" loading="lazy"><span>St. Xavier's High School</span></div>
+<div class="tour-gallery-item"><img src="image2.jpeg" alt="School photograph 2" loading="lazy"><span>Discover Our School</span></div>
+<div class="tour-gallery-item"><img src="image3.jpeg" alt="School photograph 3" loading="lazy"><span>Learning Environment</span></div>
+<div class="tour-gallery-item"><img src="image4.jpeg" alt="School photograph 4" loading="lazy"><span>School Life</span></div>
+<div class="tour-gallery-item"><img src="image5.jpeg" alt="School photograph 5" loading="lazy"><span>Our School Community</span></div>
+<div class="tour-gallery-item"><img src="image6.jpeg" alt="School photograph 6" loading="lazy"><span>Education and Growth</span></div>
+<div class="tour-gallery-item"><img src="image7.jpeg" alt="School photograph 7" loading="lazy"><span>School Experience</span></div>
+<div class="tour-gallery-item"><img src="image8.jpeg" alt="School photograph 8" loading="lazy"><span>Welcome to St. Xavier's</span></div>
+</div>
+<div class="text-center mt-5"><a href="#admissions" class="btn gold">Join St. Xavier's <i class="bi bi-arrow-right"></i></a></div>
+</div>
+</section>
+
+<section class="section pale" id="academics">
+<div class="container-xl">
+<div class="center">
+<div class="eyebrow dark">LEARNING PATHWAYS</div>
+<h2>Discover your <em>pathway.</em></h2>
+<p>Grade 10 subject combinations supplied for the school.</p>
+</div>
+<div class="cards two">
+<article class="cardx">
+<span class="tag">STEM</span>
+<h3>Science, Technology, Engineering & Mathematics</h3>
+<ul>
+<li>Biology, Chemistry, Computer Studies — ST1046</li>
+<li>Biology, Chemistry, Physics — ST1048</li>
+<li>Agriculture, General Science, Home Science — ST2088</li>
+<li>Business Studies, Computer Studies, Physics — ST2007</li>
+</ul>
+</article>
+<article class="cardx">
+<span class="tag">SOCIAL SCIENCES</span>
+<h3>People, society & communication</h3>
+<ul>
+<li>Business Studies, Fasihi ya Kiswahili, Literature in English — SS1080</li>
+<li>Business Studies, Geography, History & Citizenship — SS2025</li>
+<li>Christian Religious Education, General Science, History & Citizenship — SS2076</li>
+</ul>
+</article>
+</div>
+<small class="muted">Confirm current subject availability directly with the school before making a selection.</small>
+</div>
+</section>
+
+<section class="section" id="admissions">
+<div class="container-xl">
+<div class="banner">
+<div>
+<div class="eyebrow">ADMISSIONS</div>
+<h2>Begin your journey<br>at <em>St. Xavier's.</em></h2>
+<p>Complete the enquiry form and send the details to the school through WhatsApp.</p>
+</div>
+<a class="btn gold" href="#admissionForm">Admission enquiry ↓</a>
+</div>
+<div class="two-col admission">
+<div>
+<div class="eyebrow dark">ADMISSIONS</div>
+<h2>We're ready to<br><em>hear from you.</em></h2>
+<p>Share a learner's details with the school. WhatsApp will open with the information prepared for you to review and send.</p>
+<div class="wa-box">☏ <b>WhatsApp +254 716 501 704</b></div>
+<small class="muted">You must press Send in WhatsApp to deliver the message.</small>
+</div>
+
+<form id="admissionForm" class="formbox form-background">
+<h3>Admission enquiry form</h3>
+<p>Complete the relevant details.</p>
+<div class="row g-3">
+<div class="col-12">
+<label>Student's full name *</label>
+<input class="form-control" name="studentName" required>
+</div>
+<div class="col-md-6">
+<label>Date of birth</label>
+<input class="form-control" name="dob" type="date">
+</div>
+<div class="col-md-6">
+<label>KJSEA / Assessment number</label>
+<input class="form-control" name="assessment">
+</div>
+<div class="col-md-6">
+<label>Grade applying for *</label>
+<select class="form-select" name="grade" required>
+<option value="">Select</option>
+<option>Grade 10</option>
+<option>Other / Please advise</option>
+</select>
+</div>
+<div class="col-md-6">
+<label>Religion</label>
+<input class="form-control" name="religion">
+</div>
+<div class="col-md-6">
+<label>Denomination</label>
+<input class="form-control" name="denomination">
+</div>
+<div class="col-md-6">
+<label>Pathway</label>
+<select class="form-select" name="pathway">
+<option value="">Select</option>
+<option>STEM</option>
+<option>Social Sciences</option>
+<option>Not yet decided</option>
+</select>
+</div>
+<div class="col-12">
+<label>Subject combination</label>
+<input class="form-control" name="combination">
+</div>
+<div class="col-md-6">
+<label>Father's name</label>
+<input class="form-control" name="father">
+</div>
+<div class="col-md-6">
+<label>Father's phone</label>
+<input class="form-control" name="fatherPhone">
+</div>
+<div class="col-md-6">
+<label>Mother's name</label>
+<input class="form-control" name="mother">
+</div>
+<div class="col-md-6">
+<label>Mother's phone</label>
+<input class="form-control" name="motherPhone">
+</div>
+<div class="col-md-6">
+<label>Guardian's name</label>
+<input class="form-control" name="guardian">
+</div>
+<div class="col-md-6">
+<label>Guardian's phone</label>
+<input class="form-control" name="guardianPhone">
+</div>
+<div class="col-12"><b class="group-title">For Catholic applicants (where applicable)</b></div>
+<div class="col-md-4">
+<label>Baptism</label>
+<select class="form-select" name="baptism">
+<option value="">Select</option><option>Yes</option><option>No</option>
+</select>
+</div>
+<div class="col-md-4">
+<label>First Holy Communion</label>
+<select class="form-select" name="communion">
+<option value="">Select</option><option>Yes</option><option>No</option>
+</select>
+</div>
+<div class="col-md-4">
+<label>Confirmation</label>
+<select class="form-select" name="confirmation">
+<option value="">Select</option><option>Yes</option><option>No</option>
+</select>
+</div>
+<div class="col-12">
+<label>Additional message</label>
+<textarea class="form-control" name="parentMessage" rows="3"></textarea>
+</div>
+<div class="col-12">
+<button class="btn whatsapp w-100" type="submit"><i class="bi bi-whatsapp"></i> Send admission details on WhatsApp</button>
+<small class="muted">WhatsApp opens with the message prepared. Review and press Send.</small>
+</div>
+</div>
+</form>
+</div>
+</div>
+</section>
+
+<section class="section pale" id="fees">
+<div class="container-xl">
+<div class="eyebrow dark">PLANNING FOR SCHOOL</div>
+<div class="heading-row">
+<h2>Fee structure &<br><em>payment details.</em></h2>
+<p>School fees are payable through the bank account below. Please contact the school administration to confirm any changes before paying.</p>
+</div>
+<div class="two-col">
+<div class="tablebox">
+<h3>School fees · KSh</h3>
+<div class="table-responsive">
+<table class="table">
+<thead><tr><th></th><th>1st Term</th><th>3rd Term</th><th>2nd Term</th></tr></thead>
+<tbody>
+<tr><th>SCHOOL FEE</th><td>16,500</td><td>16,500</td><td>16,500</td></tr>
+<tr><th>ADMISSION FEE</th><td>4,000</td><td>—</td><td>—</td></tr>
+<tr class="total"><th>TOTAL</th><td>20,500</td><td>16,500</td><td>16,500</td></tr>
+</tbody>
+</table>
+</div>
+<small class="muted">Please confirm the current fee schedule with the school administration.</small>
+</div>
+<div class="pay-stack">
+<article class="pay-card">
+<div class="eyebrow dark">BANK TRANSFER</div>
+<h3>School fees · KCB</h3>
+<p>Kenya Commercial Bank (K.C.B.)</p>
+<small>Bank account number</small>
+<strong>1151895032</strong>
+<p class="muted">All school fee payments should be made through the bank account.</p>
+</article>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section" id="uniform">
+<div class="container-xl">
+<div class="center">
+<div class="eyebrow dark">UNIFORM INFORMATION</div>
+<h2>School <em>uniform.</em></h2>
+<p>Uniform requirements and related details will be communicated by the school administration at school.</p>
+<p class="signoff"><b>By Management</b></p>
+</div>
+</div>
+</section>
+
+<section class="section" id="contact">
+<div class="container-xl">
+<div class="eyebrow dark">GET IN TOUCH</div>
+<h2>We'd be glad to<br><em>hear from you.</em></h2>
+<div class="two-col contact">
+<div>
+<p>☎ <a href="tel:0702109170">0702 109 170</a></p>
+<p>✉ <a href="mailto:stxaviershighnkr@gmail.com">stxaviershighnkr@gmail.com</a></p>
+<p>⌖ Mercy Mission, Nakuru, Kenya</p>
+<p>WhatsApp <a href="https://wa.me/254716501704">+254 716 501 704</a></p>
+</div>
+<div class="map">
+<iframe title="Map to St Xavier's High School" src="https://www.google.com/maps?q=Mercy+Mission,+Nakuru,+Kenya&z=16&output=embed" loading="lazy"></iframe>
+<a href="https://www.google.com/maps?q=Mercy+Mission,+Nakuru,+Kenya" target="_blank" rel="noopener">Open directions ↗</a>
+</div>
+</div>
+</div>
+</section>
 </main>
 
-<!-- FOOTER -->
 <footer>
-
-    <div class="container-xl foot">
-
-        <div>
-
-            <a class="brand" href="#home">
-
-                <span class="brand-mark">✦</span>
-
-                <span>
-                    <b>ST. XAVIER'S</b>
-                    <small>HIGH SCHOOL · NAKURU</small>
-                </span>
-
-            </a>
-
-            <p>
-                Holistic education rooted in Christian values and principles.
-            </p>
-
-        </div>
-
-        <div>
-
-            <b>Explore</b>
-
-            <a href="#about">About</a>
-            <a href="#virtual-tour">Virtual Tour</a>
-            <a href="#academics">Academics</a>
-            <a href="#admissions">Admissions</a>
-            <a href="#fees">Fee Structure</a>
-
-        </div>
-
-        <div>
-
-            <b>Connect</b>
-
-            <a href="#donations">Donations</a>
-            <a href="#contact">Contact</a>
-            <a href="https://wa.me/254116450944">WhatsApp</a>
-
-        </div>
-
-    </div>
-
-    <div class="foot-bottom">
-        © <span id="year"></span> St. Xavier's High School, Nakuru.
-        Faith · Knowledge · Service
-    </div>
-
+<div class="container-xl foot">
+<div>
+<a class="brand" href="#home">
+<span class="brand-mark"><img src="logo.jpeg" alt="St. Xavier's High School logo"></span>
+<span><b>ST. XAVIER'S</b><small>HIGH SCHOOL · NAKURU</small></span>
+</a>
+<p>Holistic education rooted in Christian values and principles.</p>
+</div>
+<div>
+<b>Explore</b>
+<a href="#about">About</a>
+<a href="#virtual-tour">Virtual Tour</a>
+<a href="#academics">Academics</a>
+<a href="#admissions">Admissions</a>
+<a href="#fees">Fee Structure</a>
+</div>
+<div>
+<b>Connect</b>
+<a href="#contact">Contact</a>
+<a href="https://wa.me/254716501704">WhatsApp</a>
+</div>
+</div>
+<div class="foot-bottom">© <span id="year"></span> St. Xavier's High School, Nakuru. Faith · Knowledge · Service</div>
 </footer>
 
-<!-- FLOATING WHATSAPP -->
-<a class="float-wa"
-   href="https://wa.me/254116450944"
-   target="_blank"
-   rel="noopener"
-   aria-label="WhatsApp the school">
-
-    <i class="bi bi-whatsapp"></i>
-
+<a class="float-wa" href="https://wa.me/254716501704" target="_blank" rel="noopener" aria-label="WhatsApp the school">
+<i class="bi bi-whatsapp"></i>
 </a>
 
-<!-- BACK TO TOP -->
-<button class="top" id="top" aria-label="Back to top">
-    ↑
-</button>
+<button class="top" id="top" aria-label="Back to top">↑</button>
 
-<!-- ALL JAVASCRIPT IS IN main.js -->
 <script src="main.js"></script>
+
+<!-- Ensure admission enquiries use the updated WhatsApp number -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("admissionForm");
+
+    if (form) {
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const data = new FormData(form);
+            const labels = {
+                studentName: "Student's full name",
+                dob: "Date of birth",
+                assessment: "KJSEA / Assessment number",
+                grade: "Grade applying for",
+                religion: "Religion",
+                denomination: "Denomination",
+                pathway: "Pathway",
+                combination: "Subject combination",
+                father: "Father's name",
+                fatherPhone: "Father's phone",
+                mother: "Mother's name",
+                motherPhone: "Mother's phone",
+                guardian: "Guardian's name",
+                guardianPhone: "Guardian's phone",
+                baptism: "Baptism",
+                communion: "First Holy Communion",
+                confirmation: "Confirmation",
+                parentMessage: "Additional message"
+            };
+
+            let message = "ST. XAVIER'S HIGH SCHOOL - ADMISSION ENQUIRY\n\n";
+
+            for (const [key, label] of Object.entries(labels)) {
+                const value = data.get(key);
+                if (value && value.trim() !== "") {
+                    message += label + ": " + value.trim() + "\n";
+                }
+            }
+
+            const whatsappURL =
+                "https://wa.me/254716501704?text=" +
+                encodeURIComponent(message);
+
+            window.open(whatsappURL, "_blank", "noopener");
+        });
+    }
+});
+</script>
 
 </body>
 </html>
