@@ -199,6 +199,8 @@
             text-decoration: none;
         }
 
+        /* RESPONSIVE VIRTUAL TOUR */
+
         @media(max-width: 900px) {
             .tour-gallery {
                 grid-template-columns: repeat(2, 1fr);
@@ -223,18 +225,26 @@
 
 <body>
 
+<!-- HEADER -->
 <header class="site-header" id="siteHeader">
+
     <nav class="container-xl navbar">
 
         <a class="brand" href="#home">
-            <span class="brand-mark"><i class="bi bi-mortarboard-fill"></i></span>
+            <span class="brand-mark">
+                <i class="bi bi-mortarboard-fill"></i>
+            </span>
+
             <span>
                 <b>ST. XAVIER'S</b>
                 <small>HIGH SCHOOL · NAKURU</small>
             </span>
         </a>
 
-        <button class="menu-toggle d-lg-none" id="menuToggle" aria-label="Open menu">
+        <button class="menu-toggle d-lg-none"
+                id="menuToggle"
+                aria-label="Open menu"
+                aria-controls="sidebar">
             <i class="bi bi-list"></i>
         </button>
 
@@ -249,8 +259,12 @@
             <a href="#contact">Contact</a>
         </div>
 
-        <a class="nav-cta d-none d-lg-inline-flex" href="#admissions">Apply now ↗</a>
+        <a class="nav-cta d-none d-lg-inline-flex" href="#admissions">
+            Apply now ↗
+        </a>
+
     </nav>
+
 </header>
 
 <div class="backdrop" id="backdrop"></div>
@@ -259,8 +273,12 @@
 <aside class="sidebar" id="sidebar" aria-hidden="true">
 
     <div class="sidehead">
+
         <a class="brand" href="#home">
-            <span class="brand-mark"><i class="bi bi-mortarboard-fill"></i></span>
+            <span class="brand-mark">
+                <i class="bi bi-mortarboard-fill"></i>
+            </span>
+
             <span>
                 <b>ST. XAVIER'S</b>
                 <small>HIGH SCHOOL · NAKURU</small>
@@ -268,6 +286,7 @@
         </a>
 
         <button id="closeMenu" aria-label="Close menu">×</button>
+
     </div>
 
     <nav>
@@ -282,10 +301,13 @@
         <a href="#contact">⌖　Contact</a>
     </nav>
 
-    <!-- NEW SIDEBAR VIRTUAL TOUR -->
+    <!-- SIDEBAR VIRTUAL TOUR -->
     <div class="sidebar-tour">
 
-        <h4><i class="bi bi-camera-fill"></i> SCHOOL VIRTUAL TOUR</h4>
+        <h4>
+            <i class="bi bi-camera-fill"></i>
+            SCHOOL VIRTUAL TOUR
+        </h4>
 
         <p>
             Take a closer look at St. Xavier's High School.
@@ -295,25 +317,34 @@
         <div class="sidebar-gallery">
 
             <a href="#tour-image-5" aria-label="View school photograph 5">
-                <img src="image5.jpeg" alt="St Xavier's High School photograph 5" loading="lazy">
+                <img src="image5.jpeg"
+                     alt="St Xavier's High School photograph 5"
+                     loading="lazy">
             </a>
 
             <a href="#tour-image-6" aria-label="View school photograph 6">
-                <img src="image6.jpeg" alt="St Xavier's High School photograph 6" loading="lazy">
+                <img src="image6.jpeg"
+                     alt="St Xavier's High School photograph 6"
+                     loading="lazy">
             </a>
 
             <a href="#tour-image-7" aria-label="View school photograph 7">
-                <img src="image7.jpeg" alt="St Xavier's High School photograph 7" loading="lazy">
+                <img src="image7.jpeg"
+                     alt="St Xavier's High School photograph 7"
+                     loading="lazy">
             </a>
 
             <a href="#tour-image-8" aria-label="View school photograph 8">
-                <img src="image8.jpeg" alt="St Xavier's High School photograph 8" loading="lazy">
+                <img src="image8.jpeg"
+                     alt="St Xavier's High School photograph 8"
+                     loading="lazy">
             </a>
 
         </div>
 
         <a href="#virtual-tour" class="sidebar-tour-link">
-            Explore Full Virtual Tour <i class="bi bi-arrow-right"></i>
+            Explore Full Virtual Tour
+            <i class="bi bi-arrow-right"></i>
         </a>
 
     </div>
@@ -326,15 +357,35 @@
 
 <main>
 
-    <!-- HOME -->
+    <!-- HOME / EIGHT-IMAGE SLIDESHOW -->
     <section class="hero hero-simple" id="home">
 
-        <div class="hero-slideshow" aria-label="St. Xavier's High School image slideshow">
+        <div class="hero-slideshow"
+             aria-label="St. Xavier's High School image slideshow">
 
-            <div class="slide active" style="background-image:url('image1.jpeg')"></div>
-            <div class="slide" style="background-image:url('image2.jpeg')"></div>
-            <div class="slide" style="background-image:url('image3.jpeg')"></div>
-            <div class="slide" style="background-image:url('image4.jpeg')"></div>
+            <div class="slide active"
+                 style="background-image:url('image1.jpeg')"></div>
+
+            <div class="slide"
+                 style="background-image:url('image2.jpeg')"></div>
+
+            <div class="slide"
+                 style="background-image:url('image3.jpeg')"></div>
+
+            <div class="slide"
+                 style="background-image:url('image4.jpeg')"></div>
+
+            <div class="slide"
+                 style="background-image:url('image5.jpeg')"></div>
+
+            <div class="slide"
+                 style="background-image:url('image6.jpeg')"></div>
+
+            <div class="slide"
+                 style="background-image:url('image7.jpeg')"></div>
+
+            <div class="slide"
+                 style="background-image:url('image8.jpeg')"></div>
 
             <div class="slide-caption">
                 <span>ST. XAVIER'S HIGH SCHOOL</span>
@@ -346,6 +397,10 @@
                 <span></span>
                 <span></span>
                 <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
 
         </div>
@@ -354,12 +409,31 @@
 
     <!-- SCHOOL FACTS -->
     <section class="facts">
+
         <div class="container-xl fact-grid">
-            <div>▣ <b>Private School</b><small>School category</small></div>
-            <div>♧ <b>Mixed Day</b><small>School type</small></div>
-            <div>✝ <b>Catholic Values</b><small>Faith and formation</small></div>
-            <div>⌖ <b>Afraha, Nakuru</b><small>Kenya</small></div>
+
+            <div>
+                ▣ <b>Private School</b>
+                <small>School category</small>
+            </div>
+
+            <div>
+                ♧ <b>Mixed Day</b>
+                <small>School type</small>
+            </div>
+
+            <div>
+                ✝ <b>Catholic Values</b>
+                <small>Faith and formation</small>
+            </div>
+
+            <div>
+                ⌖ <b>Afraha, Nakuru</b>
+                <small>Kenya</small>
+            </div>
+
         </div>
+
     </section>
 
     <!-- ABOUT -->
@@ -412,17 +486,23 @@
 
                         <p>
                             <b>✧ Intellectual growth</b>
-                            <small>Encouraging curiosity and a love of learning.</small>
+                            <small>
+                                Encouraging curiosity and a love of learning.
+                            </small>
                         </p>
 
                         <p>
                             <b>♡ Spiritual and moral growth</b>
-                            <small>Building character through Christian values.</small>
+                            <small>
+                                Building character through Christian values.
+                            </small>
                         </p>
 
                         <p>
                             <b>♧ Social growth</b>
-                            <small>Developing responsibility, respect and service.</small>
+                            <small>
+                                Developing responsibility, respect and service.
+                            </small>
                         </p>
 
                     </div>
@@ -435,7 +515,7 @@
 
     </section>
 
-    <!-- NEW VIRTUAL TOUR -->
+    <!-- VIRTUAL TOUR -->
     <section class="virtual-tour" id="virtual-tour">
 
         <div class="container-xl">
@@ -458,10 +538,11 @@
 
             </div>
 
-            <!-- SCHOOL EXPLANATIONS -->
+            <!-- SCHOOL INFORMATION -->
             <div class="tour-description">
 
                 <article class="tour-info">
+
                     <i class="bi bi-building"></i>
 
                     <h3>About Our School</h3>
@@ -472,9 +553,11 @@
                         provides an educational environment that encourages
                         learners to grow academically, socially and spiritually.
                     </p>
+
                 </article>
 
                 <article class="tour-info">
+
                     <i class="bi bi-cross"></i>
 
                     <h3>Our Catholic Foundation</h3>
@@ -485,9 +568,11 @@
                         Christian values guide the school's approach to education,
                         discipline, respect and service.
                     </p>
+
                 </article>
 
                 <article class="tour-info">
+
                     <i class="bi bi-book-half"></i>
 
                     <h3>Our Educational Mission</h3>
@@ -498,9 +583,11 @@
                         ability, moral responsibility, confidence, creativity
                         and a commitment to making a positive difference.
                     </p>
+
                 </article>
 
                 <article class="tour-info">
+
                     <i class="bi bi-lightbulb"></i>
 
                     <h3>Academic Development</h3>
@@ -511,9 +598,11 @@
                         opportunities through academic pathways and
                         continuous learning.
                     </p>
+
                 </article>
 
                 <article class="tour-info">
+
                     <i class="bi bi-heart"></i>
 
                     <h3>Character Formation</h3>
@@ -523,9 +612,11 @@
                         We value kindness, honesty, discipline, responsibility,
                         respect and compassion in everyday school life.
                     </p>
+
                 </article>
 
                 <article class="tour-info">
+
                     <i class="bi bi-people"></i>
 
                     <h3>Community and Service</h3>
@@ -535,6 +626,7 @@
                         with families and the wider community to support
                         learners and prepare them to serve society.
                     </p>
+
                 </article>
 
             </div>
@@ -555,51 +647,70 @@
             <div class="tour-gallery">
 
                 <div class="tour-gallery-item" id="tour-image-1">
-                    <img src="image1.jpeg" alt="St Xavier's High School view 1" loading="lazy">
+                    <img src="image1.jpeg"
+                         alt="St Xavier's High School view 1"
+                         loading="lazy">
                     <span>St. Xavier's High School</span>
                 </div>
 
                 <div class="tour-gallery-item" id="tour-image-2">
-                    <img src="image2.jpeg" alt="St Xavier's High School view 2" loading="lazy">
+                    <img src="image2.jpeg"
+                         alt="St Xavier's High School view 2"
+                         loading="lazy">
                     <span>Discover Our School</span>
                 </div>
 
                 <div class="tour-gallery-item" id="tour-image-3">
-                    <img src="image3.jpeg" alt="St Xavier's High School view 3" loading="lazy">
+                    <img src="image3.jpeg"
+                         alt="St Xavier's High School view 3"
+                         loading="lazy">
                     <span>Learning Environment</span>
                 </div>
 
                 <div class="tour-gallery-item" id="tour-image-4">
-                    <img src="image4.jpeg" alt="St Xavier's High School view 4" loading="lazy">
+                    <img src="image4.jpeg"
+                         alt="St Xavier's High School view 4"
+                         loading="lazy">
                     <span>School Life</span>
                 </div>
 
                 <div class="tour-gallery-item" id="tour-image-5">
-                    <img src="image5.jpeg" alt="St Xavier's High School view 5" loading="lazy">
+                    <img src="image5.jpeg"
+                         alt="St Xavier's High School view 5"
+                         loading="lazy">
                     <span>Our School Community</span>
                 </div>
 
                 <div class="tour-gallery-item" id="tour-image-6">
-                    <img src="image6.jpeg" alt="St Xavier's High School view 6" loading="lazy">
+                    <img src="image6.jpeg"
+                         alt="St Xavier's High School view 6"
+                         loading="lazy">
                     <span>Education and Growth</span>
                 </div>
 
                 <div class="tour-gallery-item" id="tour-image-7">
-                    <img src="image7.jpeg" alt="St Xavier's High School view 7" loading="lazy">
+                    <img src="image7.jpeg"
+                         alt="St Xavier's High School view 7"
+                         loading="lazy">
                     <span>School Experience</span>
                 </div>
 
                 <div class="tour-gallery-item" id="tour-image-8">
-                    <img src="image8.jpeg" alt="St Xavier's High School view 8" loading="lazy">
+                    <img src="image8.jpeg"
+                         alt="St Xavier's High School view 8"
+                         loading="lazy">
                     <span>Welcome to St. Xavier's</span>
                 </div>
 
             </div>
 
             <div class="text-center mt-5">
+
                 <a href="#admissions" class="btn gold">
-                    Join St. Xavier's <i class="bi bi-arrow-right"></i>
+                    Join St. Xavier's
+                    <i class="bi bi-arrow-right"></i>
                 </a>
+
             </div>
 
         </div>
@@ -612,9 +723,15 @@
         <div class="container-xl">
 
             <div class="center">
+
                 <div class="eyebrow dark">LEARNING PATHWAYS</div>
+
                 <h2>Discover your <em>pathway.</em></h2>
-                <p>Grade 10 subject combinations supplied for the school.</p>
+
+                <p>
+                    Grade 10 subject combinations supplied for the school.
+                </p>
+
             </div>
 
             <div class="cards two">
@@ -623,13 +740,23 @@
 
                     <span class="tag">STEM</span>
 
-                    <h3>Science, Technology, Engineering & Mathematics</h3>
+                    <h3>
+                        Science, Technology, Engineering & Mathematics
+                    </h3>
 
                     <ul>
-                        <li>Biology, Chemistry, Computer Studies — ST1046</li>
-                        <li>Biology, Chemistry, Physics — ST1048</li>
-                        <li>Agriculture, General Science, Home Science — ST2088</li>
-                        <li>Business Studies, Computer Studies, Physics — ST2007</li>
+                        <li>
+                            Biology, Chemistry, Computer Studies — ST1046
+                        </li>
+                        <li>
+                            Biology, Chemistry, Physics — ST1048
+                        </li>
+                        <li>
+                            Agriculture, General Science, Home Science — ST2088
+                        </li>
+                        <li>
+                            Business Studies, Computer Studies, Physics — ST2007
+                        </li>
                     </ul>
 
                 </article>
@@ -641,9 +768,18 @@
                     <h3>People, society & communication</h3>
 
                     <ul>
-                        <li>Business Studies, Fasihi ya Kiswahili, Literature in English — SS1080</li>
-                        <li>Business Studies, Geography, History & Citizenship — SS2025</li>
-                        <li>Christian Religious Education, General Science, History & Citizenship — SS2076</li>
+                        <li>
+                            Business Studies, Fasihi ya Kiswahili,
+                            Literature in English — SS1080
+                        </li>
+                        <li>
+                            Business Studies, Geography,
+                            History & Citizenship — SS2025
+                        </li>
+                        <li>
+                            Christian Religious Education, General Science,
+                            History & Citizenship — SS2076
+                        </li>
                     </ul>
 
                 </article>
@@ -651,7 +787,8 @@
             </div>
 
             <small class="muted">
-                Confirm current subject availability directly with the school before making a selection.
+                Confirm current subject availability directly with the school
+                before making a selection.
             </small>
 
         </div>
@@ -666,6 +803,7 @@
             <div class="banner">
 
                 <div>
+
                     <div class="eyebrow">ADMISSIONS</div>
 
                     <h2>
@@ -677,9 +815,12 @@
                         Complete the enquiry form and send the details
                         to the school through WhatsApp.
                     </p>
+
                 </div>
 
-                <a class="btn gold" href="#admissionForm">Admission enquiry ↓</a>
+                <a class="btn gold" href="#admissionForm">
+                    Admission enquiry ↓
+                </a>
 
             </div>
 
@@ -713,28 +854,36 @@
                 <form id="admissionForm" class="formbox form-background">
 
                     <h3>Admission enquiry form</h3>
+
                     <p>Complete the relevant details.</p>
 
                     <div class="row g-3">
 
                         <div class="col-12">
                             <label>Student's full name *</label>
-                            <input class="form-control" name="studentName" required>
+                            <input class="form-control"
+                                   name="studentName"
+                                   required>
                         </div>
 
                         <div class="col-md-6">
                             <label>Date of birth</label>
-                            <input class="form-control" name="dob" type="date">
+                            <input class="form-control"
+                                   name="dob"
+                                   type="date">
                         </div>
 
                         <div class="col-md-6">
                             <label>KJSEA / Assessment number</label>
-                            <input class="form-control" name="assessment">
+                            <input class="form-control"
+                                   name="assessment">
                         </div>
 
                         <div class="col-md-6">
                             <label>Grade applying for *</label>
-                            <select class="form-select" name="grade" required>
+                            <select class="form-select"
+                                    name="grade"
+                                    required>
                                 <option value="">Select</option>
                                 <option>Grade 10</option>
                                 <option>Other / Please advise</option>
@@ -797,7 +946,9 @@
                         </div>
 
                         <div class="col-12">
-                            <b class="group-title">For Catholic applicants (where applicable)</b>
+                            <b class="group-title">
+                                For Catholic applicants (where applicable)
+                            </b>
                         </div>
 
                         <div class="col-md-4">
@@ -829,7 +980,9 @@
 
                         <div class="col-12">
                             <label>Additional message</label>
-                            <textarea class="form-control" name="parentMessage" rows="3"></textarea>
+                            <textarea class="form-control"
+                                      name="parentMessage"
+                                      rows="3"></textarea>
                         </div>
 
                         <div class="col-12">
@@ -840,7 +993,8 @@
                             </button>
 
                             <small class="muted">
-                                WhatsApp opens with the message prepared. Review and press Send.
+                                WhatsApp opens with the message prepared.
+                                Review and press Send.
                             </small>
 
                         </div>
@@ -964,8 +1118,8 @@
                         <strong>20495K + student details</strong>
 
                         <p class="muted">
-                            Instruction says student name and admission number with no spaces.
-                            Confirm exact account format before use.
+                            Instruction says student name and admission number
+                            with no spaces. Confirm exact account format before use.
                         </p>
 
                     </article>
@@ -977,15 +1131,27 @@
             <div class="cards two contributions">
 
                 <article class="cardx">
+
                     <h3>Snacks</h3>
-                    <strong>KSh 1,200 <small>per term</small></strong>
+
+                    <strong>
+                        KSh 1,200 <small>per term</small>
+                    </strong>
+
                     <p>Pay via M-Pesa to <b>0116450944</b>.</p>
+
                 </article>
 
                 <article class="cardx">
+
                     <h3>Curriculum Support Program</h3>
-                    <strong>KSh 2,500 <small>per term</small></strong>
+
+                    <strong>
+                        KSh 2,500 <small>per term</small>
+                    </strong>
+
                     <p>Pay via M-Pesa to <b>0116450944</b>.</p>
+
                 </article>
 
             </div>
@@ -1005,7 +1171,9 @@
 
                 <h2>Uniform & learner <em>requirements.</em></h2>
 
-                <p>School uniform is provided by the school at KSh 15,000.</p>
+                <p>
+                    School uniform is provided by the school at KSh 15,000.
+                </p>
 
             </div>
 
@@ -1013,9 +1181,13 @@
 
                 <b>Uniform payment — strictly via bank account</b>
 
-                <span>Account name: Simba - St. Xavier's High School</span>
+                <span>
+                    Account name: Simba - St. Xavier's High School
+                </span>
 
-                <span>KCB account number: <b>1153498650</b></span>
+                <span>
+                    KCB account number: <b>1153498650</b>
+                </span>
 
                 <strong>KSh 15,000</strong>
 
@@ -1179,15 +1351,27 @@
             <div class="cards two donation-programmes">
 
                 <article class="cardx">
+
                     <h3>Snacks</h3>
-                    <strong>KSh 1,200 <small>per term</small></strong>
+
+                    <strong>
+                        KSh 1,200 <small>per term</small>
+                    </strong>
+
                     <p>M-Pesa: <b>0116450944</b></p>
+
                 </article>
 
                 <article class="cardx">
+
                     <h3>Curriculum Support Program</h3>
-                    <strong>KSh 2,500 <small>per term</small></strong>
+
+                    <strong>
+                        KSh 2,500 <small>per term</small>
+                    </strong>
+
                     <p>M-Pesa: <b>0116450944</b></p>
+
                 </article>
 
             </div>
@@ -1217,13 +1401,24 @@
 
                 <div>
 
-                    <p>☎　<a href="tel:0703990989">0703 990 989</a></p>
+                    <p>
+                        ☎　<a href="tel:0703990989">0703 990 989</a>
+                    </p>
 
-                    <p>✉　<a href="mailto:stxaviershighkn@gmail.com">stxaviershighkn@gmail.com</a></p>
+                    <p>
+                        ✉　<a href="mailto:stxaviershighkn@gmail.com">
+                            stxaviershighkn@gmail.com
+                        </a>
+                    </p>
 
                     <p>⌖　Afraha, Nakuru County, Kenya</p>
 
-                    <p>WhatsApp　<a href="https://wa.me/254116450944">0116 450 944</a></p>
+                    <p>
+                        WhatsApp　
+                        <a href="https://wa.me/254116450944">
+                            0116 450 944
+                        </a>
+                    </p>
 
                     <p>School code　<b>K7090211</b></p>
 
@@ -1307,11 +1502,8 @@
     </div>
 
     <div class="foot-bottom">
-
         © <span id="year"></span> St. Xavier's High School, Nakuru.
-
         Faith · Knowledge · Service
-
     </div>
 
 </footer>
@@ -1332,30 +1524,8 @@
     ↑
 </button>
 
+<!-- ALL JAVASCRIPT IS IN main.js -->
 <script src="main.js"></script>
-
-<script>
-    // Automatically update copyright year
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    // Close mobile sidebar when a navigation link is selected
-    document.querySelectorAll("#sidebar nav a, #sidebar .sidebar-tour-link").forEach(link => {
-        link.addEventListener("click", () => {
-            document.getElementById("sidebar").classList.remove("active");
-            document.getElementById("backdrop").classList.remove("active");
-            document.getElementById("sidebar").setAttribute("aria-hidden", "true");
-        });
-    });
-
-    // Sidebar image links close the menu after selection
-    document.querySelectorAll(".sidebar-gallery a").forEach(link => {
-        link.addEventListener("click", () => {
-            document.getElementById("sidebar").classList.remove("active");
-            document.getElementById("backdrop").classList.remove("active");
-            document.getElementById("sidebar").setAttribute("aria-hidden", "true");
-        });
-    });
-</script>
 
 </body>
 </html>
