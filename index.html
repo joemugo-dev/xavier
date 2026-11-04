@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#ffffff">
 
-    <meta name="description" content="St. Xavier's High School is a private Catholic mixed-day senior school located at Mercy Mission, Nakuru County, Kenya. Explore admissions, academics, school fees, donations, virtual tour and contacts.">
+    <meta name="description" content="St. Xavier's High School, Much in Little, is a private Catholic mixed-day school in Kanyekine, Nakuru County, Kenya. Explore admissions, academics, school fees, virtual tour and contacts.">
     <meta name="keywords" content="St Xavier's High School, St Xaviers Nakuru, Catholic schools Nakuru, senior school Nakuru">
     <meta name="author" content="St. Xavier's High School">
     <meta name="robots" content="index, follow, max-image-preview:large">
@@ -42,6 +42,15 @@
             height: 100%;
             object-fit: contain;
             display: block;
+        }
+
+        .map iframe {
+            display: block;
+            width: 100%;
+            max-width: 100%;
+            min-height: 320px;
+            border: 0;
+            border-radius: 12px;
         }
 
         /* VIRTUAL TOUR */
@@ -140,7 +149,7 @@
             background: linear-gradient(transparent, rgba(0,0,0,.8));
         }
 
-        /* SIDEBAR */
+        /* SIDEBAR VIRTUAL TOUR */
 
         .sidebar {
             overflow-y: auto;
@@ -207,55 +216,7 @@
             text-decoration: none;
         }
 
-        /* DONATIONS */
-
-        .donation-section {
-            background: #f8fafc;
-        }
-
-        .donation-card {
-            height: 100%;
-            background: #fff;
-            border: 1px solid #e5e7eb;
-            border-radius: 16px;
-            padding: 30px;
-            box-shadow: 0 8px 25px rgba(0,0,0,.04);
-        }
-
-        .donation-card h3 {
-            font-weight: 900;
-            margin: 12px 0;
-        }
-
-        .donation-detail {
-            padding: 14px 0;
-            border-bottom: 1px solid #e5e7eb;
-        }
-
-        .donation-detail:last-child {
-            border-bottom: 0;
-        }
-
-        .donation-detail small {
-            display: block;
-            color: #64748b;
-            margin-bottom: 5px;
-        }
-
-        .donation-detail strong {
-            display: block;
-            font-size: 19px;
-            font-weight: 900;
-            overflow-wrap: anywhere;
-        }
-
-        .donation-note {
-            font-size: 13px;
-            color: #64748b;
-            line-height: 1.7;
-        }
-
-        /* RESPONSIVE */
+        /* RESPONSIVE VIRTUAL TOUR */
 
         @media(max-width: 900px) {
             .tour-gallery {
@@ -275,10 +236,6 @@
             .tour-gallery-item {
                 height: 220px;
             }
-
-            .donation-card {
-                padding: 22px;
-            }
         }
     </style>
 </head>
@@ -291,14 +248,16 @@
     <nav class="container-xl navbar">
 
         <a class="brand" href="#home">
+
             <span class="brand-mark">
                 <img src="logo.jpeg" alt="St. Xavier's High School logo">
             </span>
 
             <span>
-                <small>ST. XAVIER'S</small>
-                <small>HIGH SCHOOL · NAKURU</small>
+                <small>ST. XAVIER'S HIGH SCHOOL</small>
+                <small>MUCH IN LITTLE · NAKURU</small>
             </span>
+
         </a>
 
         <button class="menu-toggle d-lg-none"
@@ -315,7 +274,6 @@
             <a href="#academics">Academics</a>
             <a href="#admissions">Admissions</a>
             <a href="#fees">Fee Structure</a>
-            <a href="#donations">Donations</a>
             <a href="#contact">Contact</a>
         </div>
 
@@ -335,14 +293,16 @@
     <div class="sidehead">
 
         <a class="brand" href="#home">
+
             <span class="brand-mark">
                 <img src="logo.jpeg" alt="St. Xavier's High School logo">
             </span>
 
             <span>
-                <b>ST. XAVIER'S</b>
-                <small>HIGH SCHOOL · NAKURU</small>
+                <small>ST. XAVIER'S HIGH SCHOOL</small>
+                <small>MUCH IN LITTLE · NAKURU</small>
             </span>
+
         </a>
 
         <button id="closeMenu" aria-label="Close menu">×</button>
@@ -356,7 +316,6 @@
         <a href="#academics">▤　Academics</a>
         <a href="#admissions">✎　Admissions</a>
         <a href="#fees">▣　Fee Structure</a>
-        <a href="#donations">♡　Donations</a>
         <a href="#contact">⌖　Contact</a>
     </nav>
 
@@ -448,7 +407,7 @@
 
             <div class="slide-caption">
                 <span>ST. XAVIER'S HIGH SCHOOL</span>
-                <b>Learning. Faith. Excellence.</b>
+                <b>Much in Little.</b>
             </div>
 
             <div class="slide-dots" aria-label="Slideshow pagination">
@@ -468,6 +427,7 @@
 
     <!-- SCHOOL FACTS -->
     <section class="facts">
+
         <div class="container-xl fact-grid">
 
             <div class="fact-item">
@@ -490,11 +450,12 @@
 
             <div class="fact-item">
                 <i class="bi bi-geo-alt-fill"></i>
-                <b>Mercy Mission, Nakuru</b>
-                <small>Kenya</small>
+                <b>Kanyekine, Nakuru</b>
+                <small>School location</small>
             </div>
 
         </div>
+
     </section>
 
     <!-- ABOUT -->
@@ -524,7 +485,7 @@
                 <div class="about-placeholder">
                     <i class="bi bi-mortarboard-fill"></i>
                     <h3>St. Xavier's High School</h3>
-                    <p>Mercy Mission, Nakuru County, Kenya</p>
+                    <p>Kanyekine, Nakuru County, Kenya</p>
                 </div>
 
                 <div>
@@ -591,7 +552,7 @@
                 </h2>
 
                 <p>
-                    Discover St. Xavier's High School, Mercy Mission, Nakuru.
+                    Discover St. Xavier's High School, Kanyekine, Nakuru.
                     Learn about our educational mission, Catholic foundation,
                     values and commitment to developing responsible,
                     knowledgeable and well-rounded learners.
@@ -603,67 +564,91 @@
             <div class="tour-description">
 
                 <article class="tour-info">
+
                     <i class="bi bi-building"></i>
+
                     <h3>About Our School</h3>
+
                     <p>
                         St. Xavier's High School is a private mixed-day school
-                        located at Mercy Mission, Nakuru County, Kenya. The school
+                        located in Kanyekine, Nakuru County, Kenya, opposite Mercy Mission Hospital. The school
                         provides an educational environment that encourages
                         learners to grow academically, socially and spiritually.
                     </p>
+
                 </article>
 
                 <article class="tour-info">
+
                     <i class="bi bi-cross"></i>
+
                     <h3>Our Catholic Foundation</h3>
+
                     <p>
                         The school is owned and managed by the Catholic Diocese
                         of Nakuru in collaboration with the Incarnate Word Sisters.
                         Christian values guide the school's approach to education,
                         discipline, respect and service.
                     </p>
+
                 </article>
 
                 <article class="tour-info">
+
                     <i class="bi bi-book-half"></i>
+
                     <h3>Our Educational Mission</h3>
+
                     <p>
                         We believe that every learner has potential.
                         Our educational approach seeks to develop intellectual
                         ability, moral responsibility, confidence, creativity
                         and a commitment to making a positive difference.
                     </p>
+
                 </article>
 
                 <article class="tour-info">
+
                     <i class="bi bi-lightbulb"></i>
+
                     <h3>Academic Development</h3>
+
                     <p>
                         We encourage learners to explore their interests,
                         develop their abilities and prepare for future
                         opportunities through academic pathways and
                         continuous learning.
                     </p>
+
                 </article>
 
                 <article class="tour-info">
+
                     <i class="bi bi-heart"></i>
+
                     <h3>Character Formation</h3>
+
                     <p>
                         Education includes more than classroom learning.
                         We value kindness, honesty, discipline, responsibility,
                         respect and compassion in everyday school life.
                     </p>
+
                 </article>
 
                 <article class="tour-info">
+
                     <i class="bi bi-people"></i>
+
                     <h3>Community and Service</h3>
+
                     <p>
                         We recognise the importance of working together
                         with families and the wider community to support
                         learners and prepare them to serve society.
                     </p>
+
                 </article>
 
             </div>
@@ -742,10 +727,12 @@
             </div>
 
             <div class="text-center mt-5">
+
                 <a href="#admissions" class="btn gold">
                     Join St. Xavier's
                     <i class="bi bi-arrow-right"></i>
                 </a>
+
             </div>
 
         </div>
@@ -758,72 +745,48 @@
         <div class="container-xl">
 
             <div class="center">
-
-                <div class="eyebrow dark">LEARNING PATHWAYS</div>
-
-                <h2>Discover your <em>pathway.</em></h2>
-
-                <p>
-                    Grade 10 subject combinations supplied for the school.
-                </p>
-
+                <div class="eyebrow dark">ACADEMIC SUBJECTS</div>
+                <h2>Learning for <em>the future.</em></h2>
+                <p>Subjects offered at St. Xavier's High School.</p>
             </div>
 
-            <div class="cards two">
+            <div class="cards three">
 
                 <article class="cardx">
-
-                    <span class="tag">STEM</span>
-
-                    <h3>
-                        Science, Technology, Engineering & Mathematics
-                    </h3>
-
+                    <h3>Languages & Communication</h3>
                     <ul>
-                        <li>
-                            Biology, Chemistry, Computer Studies — ST1046
-                        </li>
-                        <li>
-                            Biology, Chemistry, Physics — ST1048
-                        </li>
-                        <li>
-                            Agriculture, General Science, Home Science — ST2088
-                        </li>
-                        <li>
-                            Business Studies, Computer Studies, Physics — ST2007
-                        </li>
+                        <li>English</li>
+                        <li>Kiswahili</li>
                     </ul>
-
                 </article>
 
                 <article class="cardx">
-
-                    <span class="tag">SOCIAL SCIENCES</span>
-
-                    <h3>People, society & communication</h3>
-
+                    <h3>Sciences & Technology</h3>
                     <ul>
-                        <li>
-                            Business Studies, Fasihi ya Kiswahili,
-                            Literature in English — SS1080
-                        </li>
-                        <li>
-                            Business Studies, Geography,
-                            History & Citizenship — SS2025
-                        </li>
-                        <li>
-                            Christian Religious Education, General Science,
-                            History & Citizenship — SS2076
-                        </li>
+                        <li>Mathematics</li>
+                        <li>Computer Studies</li>
+                        <li>Physics</li>
+                        <li>Chemistry</li>
+                        <li>Biology</li>
                     </ul>
+                </article>
 
+                <article class="cardx">
+                    <h3>Applied & Creative Subjects</h3>
+                    <ul>
+                        <li>Community Service Learning</li>
+                        <li>Music</li>
+                        <li>Home Science</li>
+                        <li>Business Studies</li>
+                        <li>Agriculture</li>
+                    </ul>
                 </article>
 
             </div>
 
             <small class="muted">
-                Confirm current subject availability directly with the school
-                before making a selection.
+                For guidance on subject selection and current availability,
+                please contact or visit the school.
             </small>
 
         </div>
@@ -838,23 +801,19 @@
             <div class="banner">
 
                 <div>
-
                     <div class="eyebrow">ADMISSIONS</div>
-
                     <h2>
                         Begin your journey<br>
                         at <em>St. Xavier's.</em>
                     </h2>
-
                     <p>
-                        Complete the enquiry form and send the details
-                        to the school through WhatsApp.
+                        For admission enquiries, please visit the school
+                        or call the administration office.
                     </p>
-
                 </div>
 
-                <a class="btn gold" href="#admissionForm">
-                    Admission enquiry ↓
+                <a class="btn gold" href="tel:0702109170">
+                    Call the school ↗
                 </a>
 
             </div>
@@ -863,7 +822,7 @@
 
                 <div>
 
-                    <div class="eyebrow dark">ADMISSIONS</div>
+                    <div class="eyebrow dark">VISIT OR CALL</div>
 
                     <h2>
                         We're ready to<br>
@@ -871,174 +830,52 @@
                     </h2>
 
                     <p>
-                        Share a learner's details with the school.
-                        WhatsApp will open with the information prepared
-                        for you to review and send.
+                        Parents and guardians are welcome to visit
+                        St. Xavier's High School from Monday to Friday
+                        during office hours for admission enquiries
+                        and further information.
                     </p>
 
                     <div class="wa-box">
-                        ☏　<b>Administration</b><br>
-                        WhatsApp: <b>+254 716 501 704</b><br>
-                        Office: <b>0702 109 170</b>
+                        <b>School Administration</b><br>
+                        Office:
+                        <a href="tel:0702109170">0702 109 170</a><br>
+                        WhatsApp:
+                        <a href="https://wa.me/254716501704"
+                           target="_blank"
+                           rel="noopener">
+                            +254 716 501 704
+                        </a>
                     </div>
 
-                    <small class="muted">
-                        You must press Send in WhatsApp to deliver the message.
-                    </small>
+                    <p class="muted">
+                        For official admission guidance, please speak
+                        directly with the school administration.
+                    </p>
 
                 </div>
 
-                <form id="admissionForm" class="formbox form-background">
+                <article class="cardx">
 
-                    <h3>Admission enquiry form</h3>
+                    <div class="eyebrow dark">SCHOOL VISITS</div>
 
-                    <p>Complete the relevant details.</p>
+                    <h3>Enquiry hours</h3>
 
-                    <div class="row g-3">
+                    <p><b>Monday – Friday</b></p>
 
-                        <div class="col-12">
-                            <label>Student's full name *</label>
-                            <input class="form-control"
-                                   name="studentName"
-                                   required>
-                        </div>
+                    <p>During normal school office hours.</p>
 
-                        <div class="col-md-6">
-                            <label>Date of birth</label>
-                            <input class="form-control"
-                                   name="dob"
-                                   type="date">
-                        </div>
+                    <p>
+                        Visit the school administration office for
+                        information about admissions, requirements
+                        and the application process.
+                    </p>
 
-                        <div class="col-md-6">
-                            <label>KJSEA / Assessment number</label>
-                            <input class="form-control"
-                                   name="assessment">
-                        </div>
+                    <a class="btn gold" href="tel:0702109170">
+                        Call 0702 109 170
+                    </a>
 
-                        <div class="col-md-6">
-                            <label>Grade applying for *</label>
-                            <select class="form-select"
-                                    name="grade"
-                                    required>
-                                <option value="">Select</option>
-                                <option>Grade 10</option>
-                                <option>Other / Please advise</option>
-                            </select>
-                        </div>
-
-                        <div class="col-md-6">
-                            <label>Religion</label>
-                            <input class="form-control" name="religion">
-                        </div>
-
-                        <div class="col-md-6">
-                            <label>Denomination</label>
-                            <input class="form-control" name="denomination">
-                        </div>
-
-                        <div class="col-md-6">
-                            <label>Pathway</label>
-                            <select class="form-select" name="pathway">
-                                <option value="">Select</option>
-                                <option>STEM</option>
-                                <option>Social Sciences</option>
-                                <option>Not yet decided</option>
-                            </select>
-                        </div>
-
-                        <div class="col-12">
-                            <label>Subject combination</label>
-                            <input class="form-control" name="combination">
-                        </div>
-
-                        <div class="col-md-6">
-                            <label>Father's name</label>
-                            <input class="form-control" name="father">
-                        </div>
-
-                        <div class="col-md-6">
-                            <label>Father's phone</label>
-                            <input class="form-control" name="fatherPhone">
-                        </div>
-
-                        <div class="col-md-6">
-                            <label>Mother's name</label>
-                            <input class="form-control" name="mother">
-                        </div>
-
-                        <div class="col-md-6">
-                            <label>Mother's phone</label>
-                            <input class="form-control" name="motherPhone">
-                        </div>
-
-                        <div class="col-md-6">
-                            <label>Guardian's name</label>
-                            <input class="form-control" name="guardian">
-                        </div>
-
-                        <div class="col-md-6">
-                            <label>Guardian's phone</label>
-                            <input class="form-control" name="guardianPhone">
-                        </div>
-
-                        <div class="col-12">
-                            <b class="group-title">
-                                For Catholic applicants (where applicable)
-                            </b>
-                        </div>
-
-                        <div class="col-md-4">
-                            <label>Baptism</label>
-                            <select class="form-select" name="baptism">
-                                <option value="">Select</option>
-                                <option>Yes</option>
-                                <option>No</option>
-                            </select>
-                        </div>
-
-                        <div class="col-md-4">
-                            <label>First Holy Communion</label>
-                            <select class="form-select" name="communion">
-                                <option value="">Select</option>
-                                <option>Yes</option>
-                                <option>No</option>
-                            </select>
-                        </div>
-
-                        <div class="col-md-4">
-                            <label>Confirmation</label>
-                            <select class="form-select" name="confirmation">
-                                <option value="">Select</option>
-                                <option>Yes</option>
-                                <option>No</option>
-                            </select>
-                        </div>
-
-                        <div class="col-12">
-                            <label>Additional message</label>
-                            <textarea class="form-control"
-                                      name="parentMessage"
-                                      rows="3"></textarea>
-                        </div>
-
-                        <div class="col-12">
-
-                            <button class="btn whatsapp w-100" type="submit">
-                                <i class="bi bi-whatsapp"></i>
-                                Send admission details on WhatsApp
-                            </button>
-
-                            <small class="muted">
-                                WhatsApp opens with the message prepared.
-                                Review and press Send.
-                            </small>
-
-                        </div>
-
-                    </div>
-
-                </form>
+                </article>
 
             </div>
 
@@ -1064,7 +901,8 @@
 
                 <p>
                     Payment details reproduced as supplied.
-                    Please contact the school to confirm any changes before paying.
+                    Please contact the school to confirm any changes
+                    before paying.
                 </p>
 
             </div>
@@ -1139,7 +977,8 @@
                         <strong>1151895032</strong>
 
                         <p class="muted">
-                            School instruction: strictly pay school fees via bank account.
+                            School instruction: strictly pay school fees
+                            via bank account.
                         </p>
 
                     </article>
@@ -1147,114 +986,6 @@
                 </div>
 
             </div>
-
-        </div>
-
-    </section>
-
-    <!-- DONATIONS -->
-    <section class="section donation-section" id="donations">
-
-        <div class="container-xl">
-
-            <div class="eyebrow dark">SUPPORT OUR SCHOOL</div>
-
-            <div class="heading-row">
-
-                <h2>
-                    Make a <em>donation.</em>
-                </h2>
-
-                <p>
-                    Your generosity helps support the educational mission
-                    and development of learners at St. Xavier's High School.
-                    We welcome support from individuals, families,
-                    organisations and friends of the school.
-                </p>
-
-            </div>
-
-            <div class="two-col">
-
-                <!-- DONATION BANK DETAILS -->
-                <div class="donation-card">
-
-                    <div class="eyebrow dark">DONATION ACCOUNT</div>
-
-                    <h3>Kenya Commercial Bank (KCB)</h3>
-
-                    <p>
-                        Donations can be sent through the school's existing
-                        KCB bank account.
-                    </p>
-
-                    <div class="donation-detail">
-                        <small>Bank name</small>
-                        <strong>Kenya Commercial Bank (KCB)</strong>
-                    </div>
-
-                    <div class="donation-detail">
-                        <small>Account number</small>
-                        <strong>1151895032</strong>
-                    </div>
-
-                    <div class="donation-detail">
-                        <small>SWIFT / BIC — 11 characters</small>
-                        <strong>KCBLKENXXXX</strong>
-                    </div>
-
-                    <div class="donation-detail">
-                        <small>SWIFT / BIC — 8 characters</small>
-                        <strong>KCBLKENX</strong>
-                    </div>
-
-                    <p class="donation-note mt-3">
-                        For international transfers, confirm the beneficiary
-                        name, branch requirements and applicable transfer
-                        instructions with KCB and the school administration
-                        before sending funds.
-                    </p>
-
-                </div>
-
-                <!-- DONATION MESSAGE -->
-                <div class="donation-card">
-
-                    <div class="eyebrow dark">THANK YOU FOR YOUR SUPPORT</div>
-
-                    <h3>Every contribution makes a difference.</h3>
-
-                    <p>
-                        Donations help strengthen the school's educational
-                        environment and support its commitment to holistic
-                        education rooted in Christian values.
-                    </p>
-
-                    <p>
-                        Whether you are a parent, former student, friend
-                        of the school, organisation or well-wisher,
-                        your support is appreciated.
-                    </p>
-
-                    <p>
-                        For donation enquiries, bank transfer guidance
-                        or confirmation of payment details, contact
-                        the school administration.
-                    </p>
-
-                    <a class="btn gold"
-                       href="https://wa.me/254716501704?text=Hello%20St.%20Xavier's%20High%20School,%20I%20would%20like%20to%20make%20a%20donation."
-                       target="_blank"
-                       rel="noopener">
-                        <i class="bi bi-whatsapp"></i>
-                        Enquire About Donating
-                    </a>
-
-                </div>
-
-            </div>
-
-            <p class="signoff mt-4">By Management</p>
 
         </div>
 
@@ -1269,10 +1000,14 @@
 
                 <div class="eyebrow dark">GETTING READY</div>
 
-                <h2>Uniform & learner <em>requirements.</em></h2>
+                <h2>
+                    Uniform & learner
+                    <em>requirements.</em>
+                </h2>
 
                 <p>
-                    Uniform and learner requirement details will be communicated at the school.
+                    Uniform and learner requirement details will be
+                    communicated at the school.
                 </p>
 
             </div>
@@ -1298,16 +1033,21 @@
                 <div>
 
                     <p>
-                        ☎　Office: <a href="tel:0702109170">0702 109 170</a>
+                        ☎　Office:
+                        <a href="tel:0702109170">0702 109 170</a>
                     </p>
 
                     <p>
-                        ✉　<a href="mailto:stxaviershighnkr@gmail.com">
+                        ✉　
+                        <a href="mailto:stxaviershighnkr@gmail.com">
                             stxaviershighnkr@gmail.com
                         </a>
                     </p>
 
-                    <p>⌖　Mercy Mission, Nakuru County, Kenya</p>
+                    <p>
+                        ⌖　Opposite Mercy Mission Hospital,
+                        Kanyekine, Nakuru County, Kenya
+                    </p>
 
                     <p>
                         WhatsApp　
@@ -1325,13 +1065,17 @@
 
                 <div class="map">
 
-                    <iframe
-                        title="Map to St Xavier's High School"
-                        src="https://www.google.com/maps?q=Mercy+Mission,+Nakuru&output=embed"
-                        loading="lazy">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d249.36047338419402!2d36.071631754665574!3d-0.28897699918259284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x18298deb6c37a269%3A0x370ce552afad5f43!2sSt%20Xaviers%20High%20School%2C%20Kanyekine!3m2!1d-0.2890799!2d36.0717488!4m5!1s0x18298deb6c37a269%3A0x370ce552afad5f43!2sSt%20Xaviers%20High%20School%2C%20Kanyekine!3m2!1d-0.2890799!2d36.0717488!5e0!3m2!1sen!2ske!4v1793753918093!5m2!1sen!2ske"
+                            width="600"
+                            height="450"
+                            style="border:0; width:100%; max-width:100%;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            title="Map to St Xavier's High School, Kanyekine">
                     </iframe>
 
-                    <a href="https://www.google.com/maps?q=Mercy+Mission,+Nakuru"
+                    <a href="https://www.google.com/maps/search/?api=1&query=St+Xaviers+High+School+Kanyekine"
                        target="_blank"
                        rel="noopener">
                         Open directions ↗
@@ -1361,14 +1105,15 @@
                 </span>
 
                 <span>
-                    <small>ST. XAVIER'S</small>
-                    <small>HIGH SCHOOL · NAKURU</small>
+                    <small>ST. XAVIER'S HIGH SCHOOL</small>
+                    <small>MUCH IN LITTLE · NAKURU</small>
                 </span>
 
             </a>
 
             <p>
-                Holistic education rooted in Christian values and principles.
+                Much in Little — holistic education rooted in
+                Christian values and principles.
             </p>
 
         </div>
@@ -1382,7 +1127,6 @@
             <a href="#academics">Academics</a>
             <a href="#admissions">Admissions</a>
             <a href="#fees">Fee Structure</a>
-            <a href="#donations">Donations</a>
 
         </div>
 
@@ -1398,7 +1142,7 @@
 
     <div class="foot-bottom">
         © <span id="year"></span> St. Xavier's High School, Nakuru.
-        Faith · Knowledge · Service
+        Much in Little · Faith · Knowledge · Service
     </div>
 
 </footer>
